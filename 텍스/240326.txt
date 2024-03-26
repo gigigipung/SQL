@@ -1,0 +1,16 @@
+	system
+pass	oracle
+
+	sys as sysdba
+pass	(아무거나)	sql plus에서만 가능(로컬에서만 가능 외부접속시 불가능함)
+
+FK falling key?
+
+ddl은 구조
+
+작성법
+
+select 컬럼명  (열 선택)
+from 테이블명  
+where 조건식(헹을 선택);
+
