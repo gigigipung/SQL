@@ -14,7 +14,8 @@ revoke create session from kh;
 create user kh2 identified by khpwd;
 
 
-grant connect, resource to kh, kh2;
+grant connect, UNLIMITED tablespace ,resource to kh, kh2;
+grant create view to scott,kh,kh2;
 
 --외우기
 --create user 유저명 identified by 비밀번호;
