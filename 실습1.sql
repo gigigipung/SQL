@@ -32,5 +32,26 @@ select sysdate from dual;
 select empno, ename,TRUNC(sal,-2) from emp order by sal desc;
 
 --11
-select * from emp where empno/2=0;
+select EMPNO,ename,job,hiredate,sal,comm,deptno from(
+select DECode(mod(empno,2),'1','홀수' ) as aa,EMPNO,ename,job,hiredate,sal,comm,deptno from emp) 
+where 1=1
+and aa='홀수'
+;
 
+--12
+
+select ename, to_char( hiredate,'yyyy'),to_char( hiredate,'mm') from emp;
+
+--13
+
+
+select * from emp where to_char( hiredate,'mm')='09' ;
+
+--14
+
+select * from emp where to_char( hiredate,'yy')='81' ;
+
+--15
+
+select * from emp where ename='  E' ;
+select * from emp;
