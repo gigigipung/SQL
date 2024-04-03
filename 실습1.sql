@@ -53,5 +53,5 @@ select * from emp where to_char( hiredate,'yy')='81' ;
 
 --15
 
-select * from emp where ename='  E' ;
+select * from emp where ename='E' ;
 select * from emp;
