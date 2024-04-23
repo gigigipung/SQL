@@ -23,3 +23,11 @@ grant create view to scott,kh,kh2;
 --revoke 권한명, 롤명,... from 유저명, 롤명,.....;
 --connect : 접속관련권한들로 만들어진 롤명
 --resource : 테이블(객체) 관련 권한들로 만들어진 롤명
+
+DROP USER GIPUNG CASCADE;
+create user gipung identified by 950214;
+grant connect, UNLIMITED tablespace ,resource to gipung;
+
+alter session set "_ORACLE_SCRIPT"=true;
+create user semimdb identified by khpwd;
+grant connect, UNLIMITED tablespace ,resource to semimdb;
